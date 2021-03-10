@@ -5,9 +5,17 @@ Introduction
 ------------
 This is a project suggested by Codecademy. The brief is to create a mixed message generator where when the user clicks a button, they are presented with a new random message each time. That, or, I can switch it up and add my own twist to the same type of project. Which I have. [Deeper Explanation](#Deeper-Explanation-and-uses)
 
+Task-List
+---------
+-[x] Create the basic functionality of button press gets random elements
+-[x] Order the output elements (if generated)
+-[ ] Add user input to set how many instances of an element are generated
+-[ ] Add user input to constrain(or maybe set?) the amount of elements generated
+
 Languages
 ---------
 This will be built for a browser using HTML5, CSS3 and JS. 
+
 
 Deeper Explanation and uses
 ----------------------------

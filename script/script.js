@@ -1,12 +1,14 @@
 //get the output area in the index file that will produce the constructed song
 const output = document.getElementById('output');
-
+// u will equal user input.
+let u = 0;
 //run the output function on button
 function renewOutput() {
-    output.textContent = getSongStructure();
+    output.textContent = getSongStructure(4);
 }
 
-function getSongStructure() {
+// if no user input then a random number gets assigned as u - to become n.
+function getSongStructure(u) {
     // used for the loop length and to retrieve a random number index in the loop
     const elementIndices = [0,1,2,3,4,5];
 
@@ -19,7 +21,10 @@ function getSongStructure() {
     let elementIndex = [];
 
     for (i = 0; i < elementIndices.length-1; i++){
-        let n = Math.ceil(Math.random()*5);
+        let n = u;
+        if (u === undefined){
+        n = Math.ceil(Math.random()*5);
+    }
         let songElement = elementIndices[Math.floor(Math.random()*6)];
 
         if (elementIndex.includes(songElement)) {
@@ -55,3 +60,12 @@ function getSongStructure() {
         }
         return elementOut.join(' ');
 };
+
+// need to grab user input and set it to argument.
+
+// maxElementsOf = user input
+// then if maxElementsOf === '' then run new function
+// with maxElementsOf as the argument(as this will be a variable
+// for a number.) The new function will return getSongStructure
+// with a if elementIndex.length < maxElementsOf return to run
+// again
