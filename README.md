@@ -7,10 +7,10 @@ This is a project suggested by Codecademy. The brief is to create a mixed messag
 
 Task-List
 ---------
--[x] Create the basic functionality of button press gets random elements
--[x] Order the output elements (if generated)
--[ ] Add user input to set how many instances of an element are generated
--[ ] Add user input to constrain(or maybe set?) the amount of elements generated
+- [x] Create the basic functionality of button press gets random elements
+- [x] Order the output elements (if generated)
+- [ ] Add user input to set how many instances of an element are generated
+- [ ] Add user input to constrain(or maybe set?) the amount of elements generated
 
 Languages
 ---------
