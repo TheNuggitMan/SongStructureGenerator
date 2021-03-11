@@ -16,7 +16,7 @@ Task-List
 
 Languages
 ---------
-This will be built for a browser using HTML5, CSS3 and JS. 
+This will be built for a browser using HTML, CSS and JS. 
 
 
 Deeper Explanation and uses
