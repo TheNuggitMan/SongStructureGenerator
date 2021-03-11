@@ -10,7 +10,7 @@ Task-List
 - [x] Create the basic functionality of button press gets random elements
 - [x] Order the output elements (if generated)
 - [x] Add user input to set how many instances of an element are generated
-- [ ] Add user input to constrain (or maybe set?) the amount of elements generated
+- [x] Add user input to set the amount of elements generated
 - [ ] Create styling for the site - make it look pretty!
 - [ ] Deploy it proper, and test it on friends :D
 
