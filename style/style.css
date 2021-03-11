@@ -1,0 +1,30 @@
+body {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 75vw;
+}
+
+#structureOutput {
+    text-align: center;
+    border: 3px solid firebrick;
+    width: 74vw;
+    height: 100px;
+}
+
+p{
+    text-align: center;
+
+}
+
+button, input {
+    margin: 10px;
+    margin-left: 33vw;
+    width: 150px;
+}

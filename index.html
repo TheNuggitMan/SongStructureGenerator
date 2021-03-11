@@ -3,20 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>Song Structure Generator!</title>
+        <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <div id="output">
+        <div id="container">
+            <div>
+                <div id="structureOutput">
+                    <p>Click the song structure generator button to get a random song structure!</p>
+                    <p>or choose your paramenters below.</p>
+                </div>
+                    <div>
+                        <button class"button" type="button" name="button" onclick="renewOutput(u)">Get a Song Structure!</button>
+                    </div>
+            </div>
 
+            <br>
+
+            <br><br><br>
+            <div>
+                <p>Enter how many of each element you would like..</p>
+                <p>(leave blank for a random choice)</p>
+                <input type="number" name="" value="" id="instanceInput" max="10" min="0"><br>
+                <button class"button" type="button" name="button" onclick="resetInput(u)">Reset Instances</button>
+            </div>
+            <div>
+                <p>Enter the number of elements you would like between 0 - 6</p>
+                <p>(leave blank for a random choice)</p>
+                <input type="number" name="" value="" id="elementInput" max="6" min="0"><br>
+                <button class"button" name="button" onclick="resetInput(elInput)">Reset Elements</button>
+            </div>
         </div>
-        <br>
-        <button type="button" name="button" onclick="renewOutput(u)">Get a Song Structure!</button>
-
-        <br><br><br>
-        <span><input type="number" name="" value="" id="instanceInput"></span>
-        <span><input type="number" name="" value="" id="elementInput"></input></span><br>
-        <span><button style="margin-left: 50px; margin-right: 50px" type="button" name="button" onclick="resetInput(u)">click to reset</button></span>
-        <span><button style="margin-left: 30px" type="button" name="button" onclick="resetInput(elInput)">reset Elements</button></input></span><br>
-
 
         <script src="script/script.js" charset="utf-8"></script>
     </body>

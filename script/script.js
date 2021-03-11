@@ -1,20 +1,23 @@
 //get the output area in the index file that will produce the constructed song
-const output = document.getElementById('output');
+const output = document.getElementById('structureOutput');
 let u = document.getElementById('instanceInput');
 let elInput = document.getElementById('elementInput');
 
 // lets user reset the input to nothing allowing random choices again.
-const resetInput = (u, elInput) => {
+const resetInput = (u) => {
     if(u.value){
         return u.value = '';
     }
-    if(elInput){
+    if(elInput.value){
         return elInput.value = '';
     }
 };
 
 //run the output function on button
 function renewOutput(u) {
+    if(elInput.value > 6){
+        return alert(`You entered ${elInput.value}, please choose between 0 - 6`);
+    }
     let b = elInput.value;
     let n = u.value;
     return getSongStructure(n, b);
@@ -24,7 +27,6 @@ function renewOutput(u) {
 function getSongStructure(n, b) {
     // used for the loop length and to retrieve a random number index in the loop
     const elementIndices = [0,1,2,3,4,5];
-    let indicesLength = elementIndices.length-1;
 
     // sets an array of 6 empty elements to be spliced into at a given position later.
     let elementOut = [ , , , , , ];
@@ -34,7 +36,7 @@ function getSongStructure(n, b) {
     // then the length after the fact will be tested against to either output or restart the loop
     let elementIndex = [];
 
-        for (i = 0; i < indicesLength; i++){
+        for (i = 0; i < elementIndices.length; i++){
             let v = n;
             if (v === '' || v === undefined){
             v = Math.ceil(Math.random()*5);
@@ -74,14 +76,14 @@ function getSongStructure(n, b) {
         if(b){
             // if user input, then test legnth of output against input.
             if (elementIndex.length == b){
-                output.textContent = elementOut.join(' ');
+                output.innerHTML = '<p>'+ elementOut.join(' ') + '</p>';
             } else {
-                return getSongStructure(n, b);
+                return getSongStructure(n,b);
         }
     } if(!b) {
         // if no user input and output is less that 3, restart the whole loop again
         if (elementIndex.length < 3){
             return getSongStructure(n,b);
-        } output.textContent = elementOut.join(' ');
+        } output.innerHTML = '<p>'+ elementOut.join(' ') + '</p>';
     }
 };
